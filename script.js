@@ -12,6 +12,7 @@ const selectMediaStream = async () => {
     };
   } catch (error) {
     // Catch Error Here
+    console.log(error);
   }
 };
 
