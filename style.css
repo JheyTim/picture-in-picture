@@ -1,9 +1,12 @@
+/* Load Barlow from Google Fonts; the button falls back to sans-serif if unavailable. */
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Apply border-box to the root element; this rule does not set it on descendants. */
 html {
   box-sizing: border-box;
 }
 
+/* Fill the viewport and center the button horizontally and vertically with flexbox. */
 body {
   margin: 0;
   height: 100vh;
@@ -13,6 +16,7 @@ body {
   background: rgb(37 37 37);
 }
 
+/* The padded outer border and inset highlight form a frame around the button. */
 .button-container {
   border: 2px solid black;
   padding: 10px;
@@ -20,6 +24,7 @@ body {
   box-shadow: inset 0 20px 4px -19px rgba(255, 255, 255, 0.7);
 }
 
+/* Gradient, text shadow, and inset/outer shadows give the button a raised look. */
 button {
   cursor: pointer;
   outline: none;
@@ -37,10 +42,12 @@ button {
     0 12px 12px 0 rgba(0, 0, 0, 0.3);
 }
 
+/* Reverse the gradient when the pointer hovers over the button. */
 button:hover {
   background: linear-gradient(to bottom, #696969, #575757);
 }
 
+/* Move the button down and shorten its shadow to simulate being pressed. */
 button:active {
   transform: translateY(3px);
   box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.3);

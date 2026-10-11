@@ -9,15 +9,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Video -->
+    <!--
+      The selected screen, window, or tab stream plays in this video element.
+      Keep it hidden on the page; JavaScript uses it as the picture-in-picture source.
+      The id must match the video lookup in script.js.
+    -->
     <video id="video" controls height="360" width="640" hidden></video>
 
-    <!-- Button -->
+    <!-- After choosing a sharing source, click START to open the floating video. -->
     <div class="button-container">
       <button id="button">START</button>
     </div>
 
-    <!-- Script -->
+    <!-- Load after the elements above so script.js can find them immediately. -->
     <script src="script.js"></script>
   </body>
 </html>
